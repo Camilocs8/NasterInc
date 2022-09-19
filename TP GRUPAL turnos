@@ -1,0 +1,12 @@
+/*
+proposito: generar un turno con un codigo numerico unico, fecha, horario, paciente, especialidad medica y estado para cada paciente 
+parametros:  
+           codigo: comenzando en 0 y aumentando con cada turno,registrando datos del paciente(nombre,apellido,dni...)
+           codigo para con el paciente: el Codigo guarda el apellido, nombre y DNI del paciente.
+           fecha y horario: el dia del turno se puede repetir mientras que no sea en el mismo horario que otro turno solicitado, mientras que sea atendido por el mismo especialista
+           especialidad medica: se guarda con el codigo del turno para verificar disponibilidad del especialista.
+           estado del turno: al generarse el turno se registrara como activo(1). para su cancelacion el paciente debera ingresar sus datos( indicados en el apartado de proposito) 
+          
+/*variables:
+
+    
