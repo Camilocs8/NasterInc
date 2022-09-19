@@ -5,8 +5,36 @@ parametros:
            codigo para con el paciente: el Codigo guarda el apellido, nombre y DNI del paciente.
            fecha y horario: el dia del turno se puede repetir mientras que no sea en el mismo horario que otro turno solicitado, mientras que sea atendido por el mismo especialista
            especialidad medica: se guarda con el codigo del turno para verificar disponibilidad del especialista.
-           estado del turno: al generarse el turno se registrara como activo(1). para su cancelacion el paciente debera ingresar sus datos( indicados en el apartado de proposito) 
-          
-/*variables:
+           estado del turno: al generarse el turno se registrara como activo(1). para su cancelacion el paciente debera ingresar sus datos( indicados en el apartado de proposito)   
+retorno:    para los turnos que se genera un codigo numerico unico, fecha y horario.
+            para modificacion de turnos se buscan los datos personales del paciente. Se informa en la pantalla si hay o no un turno registrado, en caso de que haya un turno registrado se modifica, se muestran los datos del turno activo, luego se selecciona turno a modificar, solicitando el codigo de identificacion. para finalmente ofrecer cambio de fecha y/u hora. por ultimo se informa el estado del turno ya modificado
 
-    
+
+do{ 
+
+          switch(opcion){
+              case 3:/llama a la funcion de administrar turnos/
+	   cout<<"1. Alta de turnos "<<endl;
+	   cout<<"2. Modificacion de turnos "<<endl;
+	   cout<<"3. Baja de turnos "<<endl;
+	   cout<<"4. Listado de turnos "<<endl;
+	   cout<<"5. Menu Principal"<<endl;
+	   cin>>menu3;
+              switch(menu3){
+                    case '1' :
+                      alta_turno();
+                      break;
+                    case '2' :
+                      modificacion_turno();
+                      break;
+                    case '3' :
+                      baja_turno();
+                      break;
+                    case '4' : 
+                      consultar_turno();
+                      break;
+                    
+                    default: 
+                        cout<<" ingresar "<<menu3>> reemplazando 1,2,3,4"<<endl;
+                    
+              
